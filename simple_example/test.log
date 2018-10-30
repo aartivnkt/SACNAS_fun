@@ -1,0 +1,2 @@
+INFO:root:Read args Namespace(input_csv='1000G_example.csv')
+INFO:root:allele_frequencies {'chrom': '1', 'pos': '15211', 'dbsnp_ID': 'rs78601809', 'ref': 'T', 'alt': 'G', 'EAS_AF': '0.504', 'AMR_AF': '0.6772', 'AFR_AF': '0.5371', 'EUR_AF': '0.7316', 'mean_allele_frequency': 0.612}

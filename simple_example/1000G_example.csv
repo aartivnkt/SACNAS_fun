@@ -1,0 +1,2 @@
+chrom,pos,dbsnp_ID,ref,alt,EAS_AF,AMR_AF,AFR_AF,EUR_AF
+1,15211,rs78601809,T,G,0.504,0.6772,0.5371,0.7316
