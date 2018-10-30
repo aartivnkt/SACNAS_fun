@@ -35,6 +35,14 @@ def read_csv(input_csv: str)->dict:
 
 
 def cal_mean_allele_frequency(row_dict: dict)->float:
+    """
+    Return a mean allele frequency from a dict with
+    allele frequency values as input
+
+    :param row_dict: dict with population allele
+    frequencies
+    :return: mean allele frequency
+    """
     return np.round(np.mean([
                 float(row_dict['EAS_AF']),
                 float(row_dict['AMR_AF']),
