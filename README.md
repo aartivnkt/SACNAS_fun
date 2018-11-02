@@ -11,7 +11,6 @@ Exercise 1:
     happens in a separate function.
     The goal of this exercise is to test important programming abilities (argument parsing, docstrings, following PEP8 standards,
     strong-typing the input args and so on).
-    parse_1000G.py file is a pythonic version of this exercise.
 
 
     ** For teams that complete this exercise quickly, test the following additional exercises **:
