@@ -15,9 +15,11 @@ def read_csv(input_csv: str)->dict:
     Parse a 1000G input csv and return
     a dict with required information
 
-    :param input_csv: input_csv file
-    :return: a dict with record info,
-    along with mean allele frequency
+    Args:
+        input_csv: input_csv file
+
+    Returns: dict
+
     """
     with open(input_csv, 'r') as input_file:
         # get headers from input file
@@ -39,9 +41,12 @@ def cal_mean_allele_frequency(row_dict: dict)->float:
     Return a mean allele frequency from a dict with
     allele frequency values as input
 
-    :param row_dict: dict with population allele
-    frequencies
-    :return: mean allele frequency
+    Args:
+        row_dict: dict with population allele
+        frequencies
+
+    Returns: float, mean allele frequency
+
     """
     return np.round(np.mean([
                 float(row_dict['EAS_AF']),
@@ -54,7 +59,8 @@ def setup_parser()->argparse.ArgumentParser:
     """
     Set up argparse
 
-    :return: argparse argument parser
+    Returns: argparse argument parser
+
     """
     parser = argparse.ArgumentParser()
     parser.add_argument('--input-csv',
