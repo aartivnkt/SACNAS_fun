@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Simple code to parse a 1000G file
-# and return a dict with mean allele
-# frequency across populations"""
+and return a dict with mean allele
+frequency across populations"""
 import argparse
 import logging
 import numpy as np
@@ -27,13 +27,15 @@ def read_csv(input_csv: str)->dict:
         # loop over records, create a dict with required
         # fields, add mean_allele_frequency field, and
         # return dict
+        record_list = []
         for record in input_file:
             input_fields = record.strip().split(',')
             row_dict = dict(zip(input_header, input_fields))
             row_dict['mean_allele_frequency'] = cal_mean_allele_frequency(
                 row_dict
             )
-        return row_dict
+            record_list.append(row_dict)
+        return record_list
 
 
 def cal_mean_allele_frequency(row_dict: dict)->float:
@@ -54,6 +56,7 @@ def cal_mean_allele_frequency(row_dict: dict)->float:
                 float(row_dict['AFR_AF']),
                 float(row_dict['EUR_AF'])
             ]),decimals=3)
+
 
 def setup_parser()->argparse.ArgumentParser:
     """
